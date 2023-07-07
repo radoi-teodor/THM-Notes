@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cherrytree>
+  <bookmarks list=""/>
+  <node name="Retro" unique_id="1" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1688729476" ts_lastsave="1688730719">
+    <rich_text>Host is up, received user-set (0.029s latency).
+Scanned at 2023-07-07 11:17:02 UTC for 178s                                                                                                                        
+Not shown: 65533 filtered tcp ports (no-response)                                                                                                                  
+PORT     STATE SERVICE       REASON                                              
+</rich_text>
+    <rich_text weight="heavy">80</rich_text>
+    <rich_text>/tcp   open  http          syn-ack ttl 127
+</rich_text>
+    <rich_text weight="heavy">3389</rich_text>
+    <rich_text>/tcp open  ms-wbt-server syn-ack ttl 127                                                                                                                       
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+OS fingerprint not ideal because: Missing a closed TCP port so results incomplete</rich_text>
+    <node name="Enumeration" unique_id="2" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1688729493" ts_lastsave="1688730829">
+      <rich_text>PORT   STATE SERVICE VERSION
+80/tcp open  http    Microsoft IIS httpd 10.0
+|_http-title: IIS Windows Server
+| http-methods: 
+|_  Potentially risky methods: TRACE
+|_http-server-header: Microsoft-IIS/10.0
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+PORT     STATE SERVICE       VERSION
+3389/tcp open  ms-wbt-server Microsoft Terminal Services
+| ssl-cert: Subject: commonName=RetroWeb
+| Not valid before: 2023-07-06T11:15:24
+|_Not valid after:  2024-01-05T11:15:24
+| rdp-ntlm-info: 
+|   Target_Name: RETROWEB
+|   NetBIOS_Domain_Name: RETROWEB
+|   NetBIOS_Computer_Name: RETROWEB
+|   DNS_Domain_Name: RetroWeb
+|   DNS_Computer_Name: RetroWeb
+|   Product_Version: 10.0.14393
+|_  System_Time: 2023-07-07T11:33:55+00:00
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+
+[+] Headers                                                                                                                                                        
+ | Interesting Entries:                                                                                                                                            
+ |  - Server: Microsoft-IIS/10.0                                                                                                                                   
+ |  - X-Powered-By: PHP/7.1.29                                                                                                                                     
+ | Found By: Headers (Passive Detection)                                                                                                                           
+ | Confidence: 100%                                                                                                                                                
+                                                                                                                                                                   
+[+] XML-RPC seems to be enabled: http://10.10.105.160/Retro/xmlrpc.php                                                                                             
+ | Found By: Direct Access (Aggressive Detection)                                                                                                                  
+ | Confidence: 100%                                                                                                                                                
+ | References:                                                                                                                                                     
+ |  - http://codex.wordpress.org/XML-RPC_Pingback_API                                                                                                              
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_ghost_scanner/                                                                            
+ |  - https://www.rapid7.com/db/modules/auxiliary/dos/http/wordpress_xmlrpc_dos/                                                                                   
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_xmlrpc_login/                                                                             
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_pingback_access/ 
+ 
+ [+] WordPress readme found: http://10.10.105.160/Retro/readme.html                                                                                                 
+ | Found By: Direct Access (Aggressive Detection)                                                                                                                  
+ | Confidence: 100%                                                                                                                                                
+                                                                                                                                                                   
+[+] The external WP-Cron seems to be enabled: http://10.10.105.160/Retro/wp-cron.php                                                                               
+ | Found By: Direct Access (Aggressive Detection)                                                                                                                  
+ | Confidence: 60%                                                                                                                                                 
+ | References:
+ |  - https://www.iplocation.net/defend-wordpress-from-ddos
+ |  - https://github.com/wpscanteam/wpscan/issues/1299
+
+[+] WordPress version 5.2.1 identified (Insecure, released on 2019-05-21).
+ | Found By: Rss Generator (Passive Detection)
+ |  - http://10.10.105.160/retro/index.php/feed/, &lt;generator&gt;https://wordpress.org/?v=5.2.1&lt;/generator&gt;
+ |  - http://10.10.105.160/retro/index.php/comments/feed/, &lt;generator&gt;https://wordpress.org/?v=5.2.1&lt;/generator&gt;
+
+[+] WordPress theme in use: 90s-retro
+ | Location: http://10.10.105.160/Retro/wp-content/themes/90s-retro/
+ | Latest Version: 1.4.10 (up to date)
+ | Last Updated: 2019-04-15T00:00:00.000Z
+ | Readme: http://10.10.105.160/Retro/wp-content/themes/90s-retro/readme.txt
+ | Style URL: http://10.10.105.160/retro/wp-content/themes/90s-retro/style.css?ver=5.2.1
+ | Style Name: 90s Retro
+ | Style URI: https://organicthemes.com/retro-theme/
+ | Description: Have you ever wished your WordPress blog looked like an old Geocities site from the 90s!? Probably n...
+ | Author: Organic Themes
+ | Author URI: https://organicthemes.com 
+ |
+ | Found By: Css Style In Homepage (Passive Detection)
+ |
+ | Version: 1.4.10 (80% confidence)
+ | Found By: Style (Passive Detection)
+ |  - http://10.10.105.160/retro/wp-content/themes/90s-retro/style.css?ver=5.2.1, Match: 'Version: 1.4.10'
+
+[+] Enumerating All Plugins (via Passive Methods)
+
+[i] No plugins Found.
+
+[+] Enumerating Config Backups (via Passive and Aggressive Methods)
+ Checking Config Backups - Time: 00:00:05 &lt;====================================================================================&gt; (137 / 137) 100.00% Time: 00:00:05
+
+We are able to login in RDP using </rich_text>
+      <rich_text weight="heavy">wade:parzival</rich_text>
+      <rich_text> (also password of wordpress).
+Always check wordpress posts!!!</rich_text>
+    </node>
+    <node name="Privilege Escalation" unique_id="3" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1688730435" ts_lastsave="1688731800">
+      <rich_text>Initially we are </rich_text>
+      <rich_text weight="heavy">wade</rich_text>
+      <rich_text>
+GROUP INFORMATION
+-----------------
+Group Name                             Type             SID          Attributes
+====================================== ================ ============ ==================================================
+Everyone                               Well-known group S-1-1-0      Mandatory group, Enabled by default, Enabled group
+BUILTIN\Remote Desktop Users           Alias            S-1-5-32-555 Mandatory group, Enabled by default, Enabled group
+BUILTIN\Users                          Alias            S-1-5-32-545 Mandatory group, Enabled by default, Enabled group
+NT AUTHORITY\REMOTE INTERACTIVE LOGON  Well-known group S-1-5-14     Mandatory group, Enabled by default, Enabled group
+NT AUTHORITY\INTERACTIVE               Well-known group S-1-5-4      Mandatory group, Enabled by default, Enabled group
+NT AUTHORITY\Authenticated Users       Well-known group S-1-5-11     Mandatory group, Enabled by default, Enabled group
+NT AUTHORITY\This Organization         Well-known group S-1-5-15     Mandatory group, Enabled by default, Enabled group
+NT AUTHORITY\Local account             Well-known group S-1-5-113    Mandatory group, Enabled by default, Enabled group
+LOCAL                                  Well-known group S-1-2-0      Mandatory group, Enabled by default, Enabled group
+NT AUTHORITY\NTLM Authentication       Well-known group S-1-5-64-10  Mandatory group, Enabled by default, Enabled group
+Mandatory Label\Medium Mandatory Level Label            S-1-16-8192
+
+
+PRIVILEGES INFORMATION
+----------------------
+Privilege Name                Description                    State
+============================= ============================== ========
+SeChangeNotifyPrivilege       Bypass traverse checking       Enabled
+SeIncreaseWorkingSetPrivilege Increase a process working set Disabled
+
+
+PS C:\Users\Wade&gt; Invoke-AllChecks
+
+
+ServiceName    : AWSLiteAgent
+Path           : C:\Program Files\Amazon\XenTools\LiteAgent.exe
+ModifiablePath : @{ModifiablePath=C:\; IdentityReference=BUILTIN\Users; Permissions=AppendData/AddSubdirectory}
+StartName      : LocalSystem
+AbuseFunction  : Write-ServiceBinary -Name 'AWSLiteAgent' -Path &lt;HijackPath&gt;
+CanRestart     : False
+Name           : AWSLiteAgent
+Check          : Unquoted Service Paths
+
+ServiceName    : AWSLiteAgent
+Path           : C:\Program Files\Amazon\XenTools\LiteAgent.exe
+ModifiablePath : @{ModifiablePath=C:\; IdentityReference=BUILTIN\Users; Permissions=WriteData/AddFile}
+StartName      : LocalSystem
+AbuseFunction  : Write-ServiceBinary -Name 'AWSLiteAgent' -Path &lt;HijackPath&gt;
+CanRestart     : False
+Name           : AWSLiteAgent
+Check          : Unquoted Service Paths
+
+ServiceName                     : gupdate
+Path                            : "C:\Program Files (x86)\Google\Update\GoogleUpdate.exe" /svc
+ModifiableFile                  : C:\
+ModifiableFilePermissions       : AppendData/AddSubdirectory
+ModifiableFileIdentityReference : BUILTIN\Users
+StartName                       : LocalSystem
+AbuseFunction                   : Install-ServiceBinary -Name 'gupdate'
+CanRestart                      : False
+Name                            : gupdate
+Check                           : Modifiable Service Files
+
+ServiceName                     : gupdatem
+Path                            : "C:\Program Files (x86)\Google\Update\GoogleUpdate.exe" /medsvc
+ModifiableFile                  : C:\
+ModifiableFilePermissions       : AppendData/AddSubdirectory
+ModifiableFileIdentityReference : BUILTIN\Users
+StartName                       : LocalSystem
+AbuseFunction                   : Install-ServiceBinary -Name 'gupdatem'
+CanRestart                      : False
+Name                            : gupdatem
+Check                           : Modifiable Service Files
+
+ServiceName                     : gupdatem
+Path                            : "C:\Program Files (x86)\Google\Update\GoogleUpdate.exe" /medsvc
+ModifiableFile                  : C:\
+ModifiableFilePermissions       : WriteData/AddFile
+ModifiableFileIdentityReference : BUILTIN\Users
+StartName                       : LocalSystem
+AbuseFunction                   : Install-ServiceBinary -Name 'gupdatem'
+CanRestart                      : False
+Name                            : gupdatem
+Check                           : Modifiable Service Files
+
+ModifiablePath    : C:\Users\Wade\AppData\Local\Microsoft\WindowsApps
+IdentityReference : RETROWEB\Wade
+Permissions       : {WriteOwner, Delete, WriteAttributes, Synchronize...}
+%PATH%            : C:\Users\Wade\AppData\Local\Microsoft\WindowsApps
+Name              : C:\Users\Wade\AppData\Local\Microsoft\WindowsApps
+Check             : %PATH% .dll Hijacks
+AbuseFunction     : Write-HijackDll -DllPath 'C:\Users\Wade\AppData\Local\Microsoft\WindowsApps\wlbsctrl.dll'
+
+It is vulnerable to this CVE: CVE-2019-0836</rich_text>
+    </node>
+    <node name="Loot" unique_id="4" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1688730719" ts_lastsave="1688730733">
+      <rich_text>Wp-config.php
+/** The name of the database for WordPress */
+define('DB_NAME', 'wordpress567');
+
+/** MySQL database username */
+define('DB_USER', '</rich_text>
+      <rich_text weight="heavy">wordpressuser567</rich_text>
+      <rich_text>');
+
+/** MySQL database password */
+define('DB_PASSWORD', '</rich_text>
+      <rich_text weight="heavy">YSPgW[%C.mQE</rich_text>
+      <rich_text>');
+</rich_text>
+    </node>
+  </node>
+</cherrytree>
