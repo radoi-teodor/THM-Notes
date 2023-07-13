@@ -102,7 +102,7 @@ We are able to login in RDP using </rich_text>
       <rich_text> (also password of wordpress).
 Always check wordpress posts!!!</rich_text>
     </node>
-    <node name="Privilege Escalation" unique_id="3" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1688730435" ts_lastsave="1688731800">
+    <node name="Privilege Escalation" unique_id="3" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1688730435" ts_lastsave="1689258793">
       <rich_text>Initially we are </rich_text>
       <rich_text weight="heavy">wade</rich_text>
       <rich_text>
@@ -193,7 +193,15 @@ Name              : C:\Users\Wade\AppData\Local\Microsoft\WindowsApps
 Check             : %PATH% .dll Hijacks
 AbuseFunction     : Write-HijackDll -DllPath 'C:\Users\Wade\AppData\Local\Microsoft\WindowsApps\wlbsctrl.dll'
 
-It is vulnerable to this CVE: CVE-2019-0836</rich_text>
+It is vulnerable to this CVE: CVE-2017-0213 =&gt; </rich_text>
+      <rich_text weight="heavy">gain root with it</rich_text>
+      <rich_text>
+</rich_text>
+      <rich_text weight="heavy">Always check for build number </rich_text>
+      <rich_text>=&gt; Also use an </rich_text>
+      <rich_text weight="heavy">EXPLOIT SUGGESTER</rich_text>
+      <rich_text> </rich_text>
+      <rich_text link="webs https://github.com/AonCyberLabs/Windows-Exploit-Suggester">https://github.com/AonCyberLabs/Windows-Exploit-Suggester</rich_text>
     </node>
     <node name="Loot" unique_id="4" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1688730719" ts_lastsave="1688730733">
       <rich_text>Wp-config.php
